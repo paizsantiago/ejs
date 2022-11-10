@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body>
+    <h1><%-title%></h1>
+    <% if(productsExist){ %>
+      <% products.forEach((item)=>{ %>
+        <div class="producto">
+            id: <%=item.id%>
+            titulo: <%=item.titulo%>
+            price: <%=item.precio%>
+            <img class="product-img" src="<%=item.thumbnail %>"/>
+        </div>
+      <% }) %>
+    <% } else{ %>  
+      <h2>Ups, no se han encontrado productos</h2>
+      <a href="./formulario">Ingresar un producto</a>
+   <% } %>
+  </body>
+</html>
+
+

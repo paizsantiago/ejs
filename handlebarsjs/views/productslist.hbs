@@ -1,0 +1,15 @@
+
+<h1>Listado de productos</h1>
+{{#if productsExist}}
+    {{#each products}}
+        <div class="producto">
+            <h3>ID: {{this.id}}</h3>
+            <h3>{{this.titulo}}</h3>
+            <h3>Precio: {{this.precio}}</h3>
+            <img src="{{this.thumbnail}}" class="product-img"/>
+        </div>
+    {{/each}}
+{{else}}
+    <h2>Ups, no se ha encontrado ningun producto</h2>
+    <a href="./formulario">Agregar un producto</a>
+{{/if}}
